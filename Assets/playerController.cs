@@ -21,7 +21,7 @@ public class playerController : MonoBehaviour
     {
         //Jump control
         if (Input.GetKeyDown(KeyCode.Space) ||
-            Input.GetKeyDown(KeyCode.W))
+		    Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow))
         {
             if (grounded) {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jump);
