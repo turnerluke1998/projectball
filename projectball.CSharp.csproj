@@ -79,7 +79,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\scripts\Coin.cs" />
+    <Compile Include="Assets\scripts\CoinController.cs" />
+    <Compile Include="Assets\scripts\backtotitle.cs" />
     <Compile Include="Assets\scripts\changescene.cs" />
+    <Compile Include="Assets\scripts\death.cs" />
     <Compile Include="Assets\scripts\playerController.cs" />
     <Compile Include="Assets\scripts\quit.cs" />
   </ItemGroup>

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class playerController : MonoBehaviour
     float moveVelocity;
     bool grounded = false;
     private object objectCollider;
+
 
     // Use this for initialization
     void Start()
@@ -37,6 +39,7 @@ public class playerController : MonoBehaviour
         }
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D> ().velocity.y);
     }
+
     //checks if it is on the ground or not
     void OnTriggerEnter2D() {
         grounded = true;
