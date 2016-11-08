@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class quit : MonoBehaviour
+public class quitcontroller : MonoBehaviour
 {
     void Update()
     {
