@@ -1,0 +1,33 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class splashtimer : MonoBehaviour
+{
+    public Transform DestinationSpot;
+    public Transform OriginSpot;
+    public float Speed;
+    public bool Switch = false;
+
+    void FixedUpdate()
+    {
+        if (transform.position == DestinationSpot.position)
+        {
+            SceneManager.LoadScene(1);
+            Switch = true;
+        }
+        if (transform.position == OriginSpot.position)
+        {
+            Switch = false;
+        }
+        if (Switch)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, OriginSpot.position, Speed);
+        }
+        else
+        {
+            transform.position = Vector2.MoveTowards(transform.position, DestinationSpot.position, Speed);
+        }
+    }
+}
+

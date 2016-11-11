@@ -6,12 +6,11 @@ using System.Threading;
 
 public class lives : MonoBehaviour
 {
-    public static int livesCount = 0;
+    public static int livesCount;
     public GameObject Heart1;
     public GameObject Heart2;
     public GameObject Heart3;
     public GameObject damage;
-    int milsecs = 2000;
 
 
 
@@ -19,11 +18,11 @@ public class lives : MonoBehaviour
     void Start()
     {
         damage.SetActive(false);
+        livesCount = 0;
     }
 
     void Update()
     {
-
     }
 
     void OnCollisionStay2D(Collision2D coll)
@@ -37,7 +36,8 @@ public class lives : MonoBehaviour
             Destroy(Heart1);
             livesCount++;
             Destroy(gameObject);
-            damage.SetActive(true);
+            //damage.SetActive(true);
+            return;
             //damage.SetActive(false);
         }
         if (livesCount == 1)
@@ -46,17 +46,17 @@ public class lives : MonoBehaviour
             livesCount++;
             Destroy(gameObject);
             damage.SetActive(true);
+            return;
             //damage.SetActive(false);
         }
         if (livesCount == 2)
         {
             Destroy(Heart3);
-            livesCount++;
-            Destroy(gameObject);
-            damage.SetActive(true);
-            //damage.SetActive(false);
             livesCount = 0;
             Coin.coinCount = 0;
+            Destroy(gameObject);
+            //damage.SetActive(true);
+            //damage.SetActive(false);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

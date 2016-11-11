@@ -15,6 +15,7 @@ public class death : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
             Coin.coinCount = 0;
+            lives.livesCount = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
