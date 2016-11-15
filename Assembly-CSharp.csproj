@@ -45,16 +45,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\Cable.cs" />
      <Compile Include="Assets\scripts\Coin.cs" />
+     <Compile Include="Assets\scripts\Gem.cs" />
+     <Compile Include="Assets\scripts\Spikes.cs" />
      <Compile Include="Assets\scripts\backtotitle.cs" />
      <Compile Include="Assets\scripts\changescene.cs" />
      <Compile Include="Assets\scripts\death.cs" />
      <Compile Include="Assets\scripts\enemymovement.cs" />
-     <Compile Include="Assets\scripts\ishurt.cs" />
      <Compile Include="Assets\scripts\lives.cs" />
      <Compile Include="Assets\scripts\movingplatform.cs" />
      <Compile Include="Assets\scripts\playerController.cs" />
      <Compile Include="Assets\scripts\quit.cs" />
+     <Compile Include="Assets\scripts\splash.cs" />
+     <Compile Include="Assets\scripts\splashtimer.cs" />
+     <Compile Include="Assets\scripts\stats.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Game Design/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

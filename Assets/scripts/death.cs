@@ -11,10 +11,16 @@ public class death : MonoBehaviour
 
     }
 
-    void OnCollisionStay2D(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
-            Coin.coinCount = 0;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        {
+            lives.livesCount = 0;
+            lives.deathCount++;
+            PlayerPrefs.SetInt("Deaths", lives.deathCount);
+            Coin.coinCount = PlayerPrefs.GetInt("Score");
+            PlayerPrefs.SetInt("Deaths", lives.deathCount);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

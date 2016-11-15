@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Coin : MonoBehaviour {
-    public int scoreValue;
     public static int coinCount = 0;
+    public static int highscorecoinCount = 0;
 
 
     void OnGUI()
@@ -18,10 +18,12 @@ public class Coin : MonoBehaviour {
 	
 	}
 
-    void OnCollisionStay2D(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
-        Destroy(gameObject);
-        coinCount++;
+        {
+            Destroy(gameObject);
+            coinCount++;
+        }
     }
 }
