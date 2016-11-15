@@ -77,10 +77,7 @@
     <Compile Include="Assets\scripts\quit.cs" />
     <Compile Include="Assets\scripts\splash.cs" />
     <Compile Include="Assets\scripts\splashtimer.cs" />
-<<<<<<< HEAD
     <Compile Include="Assets\scripts\stats.cs" />
-=======
->>>>>>> origin/master
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

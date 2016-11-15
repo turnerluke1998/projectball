@@ -31,7 +31,6 @@ public class changescene : MonoBehaviour
         {
             SceneManager.LoadScene(5);
         }
-<<<<<<< HEAD
         if (Input.GetKey("="))
         {
             Coin.coinCount++;
@@ -54,12 +53,10 @@ public class changescene : MonoBehaviour
             Cable.cableCount = PlayerPrefs.GetInt("Cables");
             Gem.gemCount = PlayerPrefs.GetInt("Gems");
         }
-=======
     }
     void OnCollisionStay2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
             SceneManager.LoadScene("scene2");
->>>>>>> origin/master
     }
 }

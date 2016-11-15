@@ -14,7 +14,6 @@ public class death : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
-<<<<<<< HEAD
         {
             lives.livesCount = 0;
             lives.deathCount++;
@@ -23,10 +22,8 @@ public class death : MonoBehaviour
             PlayerPrefs.SetInt("Deaths", lives.deathCount);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-=======
             Coin.coinCount = 0;
             lives.livesCount = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
->>>>>>> origin/master
     }
 }

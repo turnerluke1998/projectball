@@ -7,11 +7,8 @@ using System.Threading;
 public class lives : MonoBehaviour
 {
     public static int livesCount;
-<<<<<<< HEAD
     public static int enemyCount;
     public static int deathCount;
-=======
->>>>>>> origin/master
     public GameObject Heart1;
     public GameObject Heart2;
     public GameObject Heart3;
@@ -61,11 +58,8 @@ public class lives : MonoBehaviour
         if (livesCount == 2)
         {
             Destroy(Heart3);
-<<<<<<< HEAD
             lives.deathCount++;
             PlayerPrefs.SetInt("Deaths", lives.deathCount);
-=======
->>>>>>> origin/master
             livesCount = 0;
             enemyCount++;
             PlayerPrefs.SetInt("Enemies", lives.enemyCount);
@@ -73,10 +67,7 @@ public class lives : MonoBehaviour
             Destroy(gameObject);
             //damage.SetActive(true);
             //damage.SetActive(false);
-<<<<<<< HEAD
             Coin.coinCount = PlayerPrefs.GetInt("Score");
-=======
->>>>>>> origin/master
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
