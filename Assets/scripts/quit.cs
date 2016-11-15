@@ -11,8 +11,12 @@ public class quitcontroller : MonoBehaviour
     void Update()
     {
         if (Input.GetKey("escape"))
+<<<<<<< HEAD
         {
             //Coin.coinCount = 0;
+=======
+            Coin.coinCount = 0;
+>>>>>>> origin/master
             Application.Quit();
             //System.Environment.Exit();
             //System.Diagnostics.Process.GetCurrentProcess().Kill();
@@ -20,7 +24,11 @@ public class quitcontroller : MonoBehaviour
     }
     public void quitbutton(bool quitTheGame)
     {
+<<<<<<< HEAD
         //Coin.coinCount = 0;
+=======
+        Coin.coinCount = 0;
+>>>>>>> origin/master
         Application.Quit();
         //System.Environment.Exit();
         //System.Diagnostics.Process.GetCurrentProcess().Kill();

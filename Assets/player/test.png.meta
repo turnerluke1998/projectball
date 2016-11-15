@@ -1,13 +1,18 @@
 fileFormatVersion: 2
-guid: 701047afc488c104785c4dab433a3f35
-timeCreated: 1479015539
+guid: cf64518236daf8f4d9d553128f25c908
+timeCreated: 1478700670
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: spr_gem_jamie_0
-    21300002: spr_gem_jamie_1
-    21300004: spr_gem_jamie_2
-    21300006: spr_gem_jamie_3
+    21300000: test_0
+    21300002: test_1
+    21300004: test_2
+    21300006: test_3
+    21300008: test_4
+    21300010: test_5
+    21300012: test_6
+    21300014: test_7
+    21300016: test_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,7 +62,46 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_gem_jamie_0
+      name: test_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: test_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: test_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: test_3
       rect:
         serializedVersion: 2
         x: 0
@@ -70,7 +114,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_gem_jamie_1
+      name: test_4
       rect:
         serializedVersion: 2
         x: 256
@@ -83,7 +127,20 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_gem_jamie_2
+      name: test_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: test_6
       rect:
         serializedVersion: 2
         x: 0
@@ -96,10 +153,23 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: spr_gem_jamie_3
+      name: test_7
       rect:
         serializedVersion: 2
         x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: test_8
+      rect:
+        serializedVersion: 2
+        x: 512
         y: 0
         width: 256
         height: 256
