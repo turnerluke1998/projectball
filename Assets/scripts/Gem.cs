@@ -23,11 +23,6 @@ public class Gem : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
-            Animator animator = GetComponent<Animator>();
-
-            AnimatorOverrideController overrideController = new AnimatorOverrideController();
-
-            animator.runtimeAnimatorController = overrideController;
             Destroy(gameObject);
             if (gemCount <= 4)
             {

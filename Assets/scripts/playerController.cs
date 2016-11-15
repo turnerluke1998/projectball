@@ -13,6 +13,7 @@ public class playerController : MonoBehaviour
     public float Speed;
     public bool Switch = false;
     public Transform DestinationSpot;
+    public GameObject ball_animation;
 
 
     // Use this for initialization
@@ -43,6 +44,7 @@ public class playerController : MonoBehaviour
         }
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
     }
+
     //checks if it is on the ground or not
     void OnTriggerEnter2D()
     {
@@ -94,10 +96,10 @@ public class playerController : MonoBehaviour
         }
         if (coll.gameObject.tag == "Spikes")
         {
+            transform.position = Vector2.MoveTowards(transform.position, DestinationSpot.position, Speed);
             if (coll.gameObject.tag == "Platform")
             {
                 grounded = true;
-                transform.position = Vector2.MoveTowards(transform.position, DestinationSpot.position, Speed);
             }
             else
             {
