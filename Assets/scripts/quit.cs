@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class quitcontroller : MonoBehaviour
 {
@@ -12,18 +13,18 @@ public class quitcontroller : MonoBehaviour
     {
         if (Input.GetKey("escape"))
         {
+            Application.Quit();
             //Coin.coinCount = 0;
             Coin.coinCount = 0;
-            Application.Quit();
             //System.Environment.Exit();
-            //System.Diagnostics.Process.GetCurrentProcess().Kill();
+            //System.Diagnostics.Process.GetCurrentProcess().Kill();fff
         }
     }
     public void quitbutton(bool quitTheGame)
     {
+        Application.Quit();
         //Coin.coinCount = 0;
         Coin.coinCount = 0;
-        Application.Quit();
         //System.Environment.Exit();
         //System.Diagnostics.Process.GetCurrentProcess().Kill();
     }

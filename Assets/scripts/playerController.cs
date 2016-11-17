@@ -20,6 +20,7 @@ public class playerController : MonoBehaviour
     void Start()
     {
         moveSpeed = 7;
+        Coin.coinCount = 0;
     }
 
     // Update is called once per frame

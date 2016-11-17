@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class changescene : MonoBehaviour
 {
+    void Start()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+
+        Debug.Log("Active scene is '" + scene.name + "'.");
+    }
+
     //Use this for initialization
     public void changeToScene(int changeTheScene)
     {
@@ -34,29 +40,42 @@ public class changescene : MonoBehaviour
         if (Input.GetKey("="))
         {
             Coin.coinCount++;
+            Coin.totalcoinCount++;
+            PlayerPrefs.SetInt("TotalCoins", Coin.totalcoinCount);
         }
         if (Input.GetKey("-"))
         {
             Coin.coinCount--;
+            Coin.totalcoinCount--;
+        }
+        if (Input.GetKey("]"))
+        {
+            lives.livesCount++;
+        }
+        if (Input.GetKey("["))
+        {
+            lives.livesCount--;
         }
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            PlayerPrefs.SetInt("Score", Coin.coinCount);
+            PlayerPrefs.SetInt("TotalCoins", Coin.totalcoinCount);
+            PlayerPrefs.SetInt("Coins", Coin.coinCount);
             PlayerPrefs.SetInt("Cables", Cable.cableCount);
             PlayerPrefs.SetInt("Gems", Gem.gemCount);
-            SceneManager.LoadScene("scene2");
-            Coin.coinCount = PlayerPrefs.GetInt("Score");
-            Coin.highscorecoinCount = PlayerPrefs.GetInt("Score");
-            Cable.cableCount = PlayerPrefs.GetInt("Cables");
-            Gem.gemCount = PlayerPrefs.GetInt("Gems");
+            PlayerPrefs.SetInt("Lives", lives.livesCount);
+            if (SceneManager.GetActiveScene().name == "scene1")
+            {
+                levelselector.isLocked = 1;
+                PlayerPrefs.SetInt("isLocked", levelselector.isLocked); 
+                SceneManager.LoadScene("scene1_victory");
+            }
+            if (SceneManager.GetActiveScene().name == "scene2")
+            {
+                SceneManager.LoadScene("scene2_victory");
+            }
         }
-    }
-    void OnCollisionStay2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Player")
-            SceneManager.LoadScene("scene2");
     }
 }

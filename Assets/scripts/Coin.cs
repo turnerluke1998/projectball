@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Coin : MonoBehaviour {
     public static int coinCount = 0;
-    public static int highscorecoinCount = 0;
+    public static int totalcoinCount = 0;
 
 
     void OnGUI()
@@ -24,6 +24,8 @@ public class Coin : MonoBehaviour {
         {
             Destroy(gameObject);
             coinCount++;
+            totalcoinCount++;
+            PlayerPrefs.SetInt("Total", Coin.totalcoinCount);
         }
     }
 }
