@@ -1,6 +1,6 @@
-5.4.2f2:2.3.0.0
+5.4.2f2:2.1.0.0
 StandaloneWindows
-D:/Game Design/Unity/Editor/Data/Managed/UnityEngine.dll
-D:/Game Design/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
-D:/Game Design/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
-D:/Game Design/Unity/Editor/Data/Managed/UnityEditor.dll
+M:/Unity/Editor/Data/Managed/UnityEngine.dll
+M:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
+M:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
+M:/Unity/Editor/Data/Managed/UnityEditor.dll
