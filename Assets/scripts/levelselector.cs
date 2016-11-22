@@ -7,6 +7,7 @@ public class levelselector : MonoBehaviour {
     public static int isLocked;
     public static int isComplete_1;
     public static int isComplete_2;
+    public static int isComplete_3;
     public GameObject lock2;
     public GameObject lock3;
     public GameObject lock4;
@@ -35,17 +36,17 @@ public class levelselector : MonoBehaviour {
         }
         if (isLocked >= 2)
         {
-            Destroy(lock3);
+            //Destroy(lock3);
             completelevelicon2.SetActive(true);
             isComplete_2 = 1;
-            PlayerPrefs.SetInt("level2_iscomplete", isComplete_1);
+            PlayerPrefs.SetInt("level2_iscomplete", isComplete_2);
         }
         if (isLocked >= 3)
         {
-            Destroy(lock4);
-            completelevelicon.SetActive(true);
-            isComplete_1 = 1;
-            PlayerPrefs.SetInt("level3_iscomplete", isComplete_1);
+            //Destroy(lock4);
+            //completelevelicon3.SetActive(true);
+            //isComplete_3 = 1;
+            //PlayerPrefs.SetInt("level3_iscomplete", isComplete_3);
         }
     }
     public void loadLevel1()

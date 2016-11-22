@@ -86,6 +86,8 @@ public class changescene : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "scene2")
             {
+                levelselector.isLocked = 2;
+                PlayerPrefs.SetInt("isLocked", levelselector.isLocked);
                 SceneManager.LoadScene("scene2_victory");
             }
         }
