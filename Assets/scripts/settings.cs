@@ -7,7 +7,8 @@ public class settings : MonoBehaviour {
     public void resetAllLevelProgress()
     {
         levelselector.isLocked = 0;
-        PlayerPrefs.DeleteKey("isComplete");
+        PlayerPrefs.DeleteKey("isComplete_1");
+        PlayerPrefs.DeleteKey("isComplete_2");
         PlayerPrefs.DeleteKey("isLocked");
         SceneManager.LoadScene(4);
     }
@@ -20,7 +21,8 @@ public class settings : MonoBehaviour {
         PlayerPrefs.DeleteKey("Deaths");
         PlayerPrefs.DeleteKey("Cables");
         PlayerPrefs.DeleteKey("Gems");
-        PlayerPrefs.DeleteKey("isComplete");
+        PlayerPrefs.DeleteKey("isComplete_1");
+        PlayerPrefs.DeleteKey("isComplete_2");
     }
     public void resetAllData()
     {
@@ -33,5 +35,7 @@ public class settings : MonoBehaviour {
         PlayerPrefs.DeleteKey("Gems");
         levelselector.isLocked = 0;
         PlayerPrefs.DeleteKey("isLocked");
+        PlayerPrefs.DeleteKey("isComplete_1");
+        PlayerPrefs.DeleteKey("isComplete_2");
     }
 }

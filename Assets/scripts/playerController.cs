@@ -26,6 +26,10 @@ public class playerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("'"))
+        {
+            grounded = false;
+        }
         //Jump control
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {

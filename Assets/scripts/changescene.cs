@@ -37,6 +37,18 @@ public class changescene : MonoBehaviour
         {
             SceneManager.LoadScene(5);
         }
+        if (Input.GetKey("6"))
+        {
+            SceneManager.LoadScene(6);
+        }
+        if (Input.GetKey("7"))
+        {
+            SceneManager.LoadScene(7);
+        }
+        if (Input.GetKey("8"))
+        {
+            SceneManager.LoadScene(8);
+        }
         if (Input.GetKey("="))
         {
             Coin.coinCount++;
