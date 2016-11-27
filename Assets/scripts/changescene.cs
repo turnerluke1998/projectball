@@ -78,17 +78,50 @@ public class changescene : MonoBehaviour
             PlayerPrefs.SetInt("Cables", Cable.cableCount);
             PlayerPrefs.SetInt("Gems", Gem.gemCount);
             PlayerPrefs.SetInt("Lives", lives.livesCount);
+            levelselector.isComplete_1 = PlayerPrefs.GetInt("level1_iscomplete");
+            levelselector.isComplete_2 = PlayerPrefs.GetInt("level2_iscomplete");
+            levelselector.isComplete_3 = PlayerPrefs.GetInt("level3_iscomplete");
+            levelselector.isComplete_4 = PlayerPrefs.GetInt("level4_iscomplete");
             if (SceneManager.GetActiveScene().name == "scene1")
             {
-                levelselector.isLocked = 1;
+                levelselector.isLocked = PlayerPrefs.GetInt("isLocked");
+                if (levelselector.isLocked <= 0)
+                {
+                    levelselector.isLocked = 1;
+                }
                 PlayerPrefs.SetInt("isLocked", levelselector.isLocked); 
                 SceneManager.LoadScene("scene1_victory");
+                return;
             }
             if (SceneManager.GetActiveScene().name == "scene2")
             {
-                levelselector.isLocked = 2;
+                if (levelselector.isLocked <= 1)
+                {
+                    levelselector.isLocked = 2;
+                }
                 PlayerPrefs.SetInt("isLocked", levelselector.isLocked);
                 SceneManager.LoadScene("scene2_victory");
+                return;
+            }
+            if (SceneManager.GetActiveScene().name == "scene3")
+            {
+                if (levelselector.isLocked <= 2)
+                {
+                    levelselector.isLocked = 3;
+                }
+                PlayerPrefs.SetInt("isLocked", levelselector.isLocked);
+                SceneManager.LoadScene("scene3_victory");
+                return;
+            }
+            if (SceneManager.GetActiveScene().name == "scene4")
+            {
+                if (levelselector.isLocked <= 3)
+                {
+                    levelselector.isLocked = 4;
+                }
+                PlayerPrefs.SetInt("isLocked", levelselector.isLocked);
+                SceneManager.LoadScene("scene4_victory");
+                return;
             }
         }
     }
