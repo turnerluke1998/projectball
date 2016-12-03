@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class changescene : MonoBehaviour
 {
+    public bool enablecheats;
+
     void Start()
     {
         Scene scene = SceneManager.GetActiveScene();
@@ -17,56 +19,80 @@ public class changescene : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKey("0"))
+            if (Input.GetKeyDown(KeyCode.Numlock))
         {
-            SceneManager.LoadScene(0);
+            enablecheats = true;
+            Debug.Log("Cheats enabled.");
         }
-        if (Input.GetKey("2"))
+        if (enablecheats == true)
         {
-            SceneManager.LoadScene(2);
-        }
-        if (Input.GetKey("3"))
-        {
-            SceneManager.LoadScene(3);
-        }
-        if (Input.GetKey("4"))
-        {
-            SceneManager.LoadScene(4);
-        }
-        if (Input.GetKey("5"))
-        {
-            SceneManager.LoadScene(5);
-        }
-        if (Input.GetKey("6"))
-        {
-            SceneManager.LoadScene(6);
-        }
-        if (Input.GetKey("7"))
-        {
-            SceneManager.LoadScene(7);
-        }
-        if (Input.GetKey("8"))
-        {
-            SceneManager.LoadScene(8);
-        }
-        if (Input.GetKey("="))
-        {
-            Coin.coinCount++;
-            Coin.totalcoinCount++;
-            PlayerPrefs.SetInt("TotalCoins", Coin.totalcoinCount);
-        }
-        if (Input.GetKey("-"))
-        {
-            Coin.coinCount--;
-            Coin.totalcoinCount--;
-        }
-        if (Input.GetKey("]"))
-        {
-            lives.livesCount++;
-        }
-        if (Input.GetKey("["))
-        {
-            lives.livesCount--;
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                SceneManager.LoadScene(1);
+            }
+            if (Input.GetKeyDown(KeyCode.F2))
+            {
+                SceneManager.LoadScene(2);
+            }
+            if (Input.GetKeyDown(KeyCode.F3))
+            {
+                SceneManager.LoadScene(3);
+            }
+            if (Input.GetKeyDown(KeyCode.F4))
+            {
+                SceneManager.LoadScene(4);
+            }
+            if (Input.GetKeyDown(KeyCode.F5))
+            {
+                SceneManager.LoadScene(5);
+            }
+            if (Input.GetKeyDown(KeyCode.F6))
+            {
+                SceneManager.LoadScene(6);
+            }
+            if (Input.GetKeyDown(KeyCode.F7))
+            {
+                SceneManager.LoadScene(7);
+            }
+            if (Input.GetKeyDown(KeyCode.F8))
+            {
+                SceneManager.LoadScene(8);
+            }
+            if (Input.GetKeyDown(KeyCode.F9))
+            {
+                SceneManager.LoadScene(9);
+            }
+            if (Input.GetKeyDown(KeyCode.F10))
+            {
+                SceneManager.LoadScene(10);
+            }
+            if (Input.GetKeyDown(KeyCode.F11))
+            {
+                SceneManager.LoadScene(11);
+            }
+            if (Input.GetKeyDown(KeyCode.F12))
+            {
+                SceneManager.LoadScene(12);
+            }
+            if (Input.GetKeyDown(KeyCode.Equals))
+            {
+                Coin.coinCount++;
+                Coin.totalcoinCount++;
+                PlayerPrefs.SetInt("TotalCoins", Coin.totalcoinCount);
+            }
+            if (Input.GetKeyDown(KeyCode.Minus))
+            {
+                Coin.coinCount--;
+                Coin.totalcoinCount--;
+            }
+            if (Input.GetKeyDown(KeyCode.LeftBracket))
+            {
+                lives.livesCount++;
+            }
+            if (Input.GetKeyDown(KeyCode.RightBracket))
+                {
+                lives.livesCount--;
+            }
         }
     }
     void OnCollisionEnter2D(Collision2D coll)

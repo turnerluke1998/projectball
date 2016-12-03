@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class quitcontroller : MonoBehaviour
+public class quit : MonoBehaviour
 {
     void Start()
     {
@@ -13,19 +13,13 @@ public class quitcontroller : MonoBehaviour
     {
         if (Input.GetKey("escape"))
         {
-            Application.Quit();
-            //Coin.coinCount = 0;
             Coin.coinCount = 0;
-            //System.Environment.Exit();
-            //System.Diagnostics.Process.GetCurrentProcess().Kill();fff
+            Application.Quit();
         }
     }
     public void quitbutton(bool quitTheGame)
     {
-        Application.Quit();
-        //Coin.coinCount = 0;
         Coin.coinCount = 0;
-        //System.Environment.Exit();
-        //System.Diagnostics.Process.GetCurrentProcess().Kill();
+        Application.Quit();
     }
 }
